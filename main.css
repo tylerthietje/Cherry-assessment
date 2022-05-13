@@ -3,10 +3,16 @@
   padding: 0;
   margin: 0;
   text-align: center;
+  scroll-behavior: smooth;
 }
 
 body {
   background: gray;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
 }
 
 .floor {
@@ -22,8 +28,8 @@ span {
 
 .control-panel {
   position: fixed;
-  left: 20px;
-  top: 50%;
+  left: 40px;
+  top: 40%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -51,14 +57,29 @@ span {
   color: white;
 }
 
+.floor-number {
+  font-size: 22px;
+}
+
 .up-light {
   height: 20px;
   width: 20px;
   display: flex;
-  color: green;
+}
+
+.up-light-on {
+  height: 20px;
+  width: 20px;
+  display: flex;
+  color: lime;
 }
 
 .down-light {
+  height: 20px;
+  width: 20px;
+  display: flex;
+}
+.down-light-on {
   height: 20px;
   width: 20px;
   display: flex;
@@ -66,18 +87,20 @@ span {
 }
 
 .buttons {
-  width: 20px;
+  width: 30px;
   height: 20px;
   border: solid black 1px;
-  border-radius: 50%;
+  border-radius: 25%;
   margin: 3px;
 }
 
-.buttons:hover{
-  background: black;
-  color: white;
+.buttons:hover {
+  background: palegoldenrod;
   cursor: pointer;
 }
 
-.control-panel {
+.btn-waiting {
+  background: palegoldenrod;
+  cursor: pointer;
 }
+
