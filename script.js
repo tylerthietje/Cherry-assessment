@@ -2,10 +2,6 @@ const buttons = document.querySelectorAll('.buttons');
 const upLight = document.querySelector('.up-light');
 const downLight = document.querySelector('.down-light');
 const floorNumber = document.querySelector('.floor-number');
-const flr1 = document.querySelector('#floor1');
-const flr2 = document.querySelector('#floor2');
-const flr3 = document.querySelector('#floor3');
-const flr4 = document.querySelector('#floor4');
 
 buttons.forEach((button) => {
   button.addEventListener('click', () => {
@@ -20,10 +16,8 @@ let newValue = 0;
 window.addEventListener('scroll', (e) => {
   newValue = window.pageYOffset;
   if (oldValue < newValue) {
-    console.log('Down');
     downLight.classList.add('down-light-on');
   } else if (oldValue > newValue) {
-    console.log('Up');
     upLight.classList.add('up-light-on');
   }
   oldValue = newValue;
@@ -37,4 +31,5 @@ function lightsOff() {
     btn.classList.remove('btn-waiting');
   });
 }
-setInterval(lightsOff, 1000);
+setInterval(lightsOff, 750);
+
